@@ -1,3 +1,5 @@
+import java.io.IOException;
+
 /* 
  * File Name: Main.java
  * Created: 4-23-22
@@ -5,7 +7,9 @@
  */
 
 public class Main {
-	public static void main(String[] args)  { 
+	public static void main(String[] args) throws IOException  { 
+		Input input = new Input();
+		input.newItem();
 		Table ReadingFile = new Table();
 		ReadingFile.readTable();
 	}
