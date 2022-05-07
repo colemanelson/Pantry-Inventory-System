@@ -8,9 +8,11 @@ import java.io.IOException;
 
 public class Main {
 	public static void main(String[] args) throws IOException  { 
+		Table ReadingFile = new Table();
 		Input input = new Input();
 		input.newItem();
-		Table ReadingFile = new Table();
+		input.editItem();
+		input.deleteItem();
 		ReadingFile.readTable();
 	}
 }

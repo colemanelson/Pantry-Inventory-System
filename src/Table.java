@@ -10,9 +10,10 @@ import java.util.*;
 
 public class Table {  
 	
-	public void readTable() {
+	public String[][] readTable() {
 		String line = "";  
 		String splitBy = ",";
+		String[][] array = null;
 		
 		try   {  
 			//parsing a CSV file into BufferedReader class constructor  
@@ -28,15 +29,13 @@ public class Table {
 			}
 
 			// convert our list to a String array.
-			String[][] array = new String[lines.size()][0];
-			lines.toArray(array);
-			
-			//this is to test proper output. can be deleted later 
-			System.out.println(Arrays.deepToString(array));
+			array = new String[lines.size()][0];
+			lines.toArray(array);			
 		}   
 		
 		catch (IOException e)   {  
 			e.printStackTrace();  
-		}  
+		}
+		return array;  
 	}
 }
